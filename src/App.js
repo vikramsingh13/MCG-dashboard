@@ -16,7 +16,7 @@ const App = () => {
                     <main className='content'>
                         <Navbar />
                         <Routes>
-                            
+                            <Route path="/" element={<Dashboard />} />
                         </Routes>
                     </main>
 

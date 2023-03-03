@@ -50,7 +50,6 @@ const Sidebar = () => {
                     button: ({ level, active, disabled }) => {
                         if (level === 0) {
                             return {
-                                color: "#8AC5BC",
                                 backgroundColor: active ? "#8AC5BC" : undefined,
                                 "&:hover": {
                                     backgroundColor: `${colors.primary[400]}`,
@@ -68,9 +67,11 @@ const Sidebar = () => {
                 <MenuItem
                     icon={
                         isCollapsed ? (
-                            <MenuOutlinedIcon
-                                onClick={() => collapseSidebar()}
-                            />
+                            <IconButton>
+                                <MenuOutlinedIcon
+                                    onClick={() => collapseSidebar()}
+                                />
+                            </IconButton>
                         ) : undefined
                     }
                     style={{
@@ -95,6 +96,7 @@ const Sidebar = () => {
                                 style={{
                                     cursor: "default",
                                 }}
+                                variant="h3"
                             >
                                 Admins
                             </Typography>
