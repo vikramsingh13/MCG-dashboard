@@ -76,6 +76,7 @@ const Sidebar = () => {
                     style={{
                         margin: "10px 0 20px 0",
                         color: "colors.grey[100]",
+                        cursor: "auto",
                     }}
                 >
                     {!isCollapsed && (
@@ -90,7 +91,13 @@ const Sidebar = () => {
                                     onClick={() => collapseSidebar()}
                                 />
                             </IconButton>
-                            <Typography>Admins</Typography>
+                            <Typography
+                                style={{
+                                    cursor: "default",
+                                }}
+                            >
+                                Admins
+                            </Typography>
                         </Box>
                     )}
                 </MenuItem>
