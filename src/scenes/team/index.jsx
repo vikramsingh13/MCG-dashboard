@@ -18,7 +18,7 @@ const Team = () => {
             field: "name",
             headerName: "Name",
             flex: 1,
-            cellClassName: "name-column--cell",
+            cellClassName: "name-column-cell",
         },
         {
             field: "age",
@@ -78,6 +78,23 @@ const Team = () => {
                 sx={{
                     "& .MuiDataGrid-root": {
                         border: "none",
+                    },
+                    "& .MuiDataGrid-cell": {
+                        borderBottom: "none",
+                    },
+                    "& .name-column-cell": {
+                        color: colors.greenAccent[300],
+                    },
+                    "& .MuiDataGrid-columnHeaders": {
+                        backgroundColor: colors.blueAccent[600],
+                        borderBottom: "none",
+                    },
+                    "& .MuiDataGrid-virtualScroller": {
+                        backgroundColor: colors.primary[400],
+                    },
+                    "& .MuiDataGrid-footerContainer": {
+                        borderTop: "none",
+                        backgroundColor: colors.blueAccent[600],
                     },
                 }}
             >
