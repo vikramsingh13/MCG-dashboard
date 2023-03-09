@@ -1,32 +1,59 @@
-import { ColorModeContext, useMode} from './theme';
-import { CssBaseline, ThemeProvider } from '@mui/material';
-import { Routes, Route} from "react-router-dom";
-import Navbar from './scenes/global/Navbar';
-import Sidebar from './scenes/global/Sidebar';
-import Dashboard from "./scenes/dashboard";
-import Team from "./scenes/team";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { FiSettings } from "react-icons/fi";
 
-const App = () => {
-    const [theme, colorMode] = useMode();
+function App() {
+    const activeMenu = false;
+
     return (
-        <ColorModeContext.Provider value={colorMode} >
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <div className="app">
-                    <Sidebar />
-                    <main className='content'>
-                        <Navbar />
+        <div className="App">
+            <Router>
+                <div className="flex relative dark:bg-main-dark-bg">
+                    <div
+                        className="fixed right-4 bottom-4"
+                        style={{ zIndex: "1000" }}
+                    >
+                        <button
+                            title="settings"
+                            type="button"
+                            className=" text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
+                            style={{ background: "blue", borderRadius: "50%" }}
+                        >
+                            <FiSettings />
+                        </button>
+                    </div>
+                    {activeMenu ? (
+                        <aside className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+                            Sidebar
+                        </aside>
+                    ) : (
+                        <aside className="w-0 dark:bg-secondary-dark-bg">
+                            Sidebar
+                        </aside>
+                    )}
+                    <div
+                        className={`dark:bg-main-bg bg-main-bg min-h-screen w-full ${
+                            activeMenu ? "md-ml-72" : "flex-2"
+                        }`}
+                    >
+                        <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
+                            Navbar
+                        </div>
+                    </div>
+                    <div className=" bg-slate-600">
                         <Routes>
-                            <Route path="/" element={<Dashboard />} />
-                            <Route path="/team" element={<Team />} />
+                            {/* Dashboard */}
+                            <Route path="/" element="Ecommerce" />
+                            <Route path="/ecommerce" element="Ecommerce" />
+
+                            {/* */}
+                            
                         </Routes>
-                    </main>
-
+                    </div>
                 </div>
-
-            </ThemeProvider>
-        </ColorModeContext.Provider>
-        
+            </Router>
+        </div>
     );
 }
 
