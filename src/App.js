@@ -3,8 +3,27 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { FiSettings } from "react-icons/fi";
 
+import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import {
+    Ecommerce,
+    Orders,
+    Calendar,
+    Employees,
+    Stacked,
+    Pyramid,
+    Customers,
+    Kanban,
+    Area,
+    Bar,
+    Pie,
+    Financial,
+    ColorPicker,
+    ColorMapping,
+    Editor,
+} from "./pages";
+
 function App() {
-    const activeMenu = false;
+    const activeMenu = true;
 
     return (
         <div className="App">
@@ -25,11 +44,11 @@ function App() {
                     </div>
                     {activeMenu ? (
                         <aside className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
-                            Sidebar
+                            <Sidebar />
                         </aside>
                     ) : (
                         <aside className="w-0 dark:bg-secondary-dark-bg">
-                            Sidebar
+                            <Sidebar />
                         </aside>
                     )}
                     <div
@@ -38,17 +57,16 @@ function App() {
                         }`}
                     >
                         <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
-                            Navbar
+                            <Navbar />
                         </div>
                     </div>
-                    <div className=" bg-slate-600">
+                    <div className="">
                         <Routes>
                             {/* Dashboard */}
-                            <Route path="/" element="Ecommerce" />
-                            <Route path="/ecommerce" element="Ecommerce" />
+                            <Route path="/" element={<Ecommerce />} />
+                            <Route path="/ecommerce" element={<Ecommerce />} />
 
                             {/* */}
-                            
                         </Routes>
                     </div>
                 </div>
