@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { SiShopware } from "react-icons/si";
 import { MdOutlineCancel } from "react-icons/md";
 
-import { links } from "../data/dummy";
+import { links } from "../data/links";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Sidebar = () => {
