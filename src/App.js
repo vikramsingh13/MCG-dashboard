@@ -6,9 +6,7 @@ import { FiSettings } from "react-icons/fi";
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
     Dashboard,
-    Orders,
     Calendar,
-    AddShip,
     Stacked,
     Pyramid,
     ShipList,
@@ -22,6 +20,10 @@ import {
     Editor,
     Line,
     EditShip,
+    AddShip,
+    Orders,
+    AddOrder,
+    EditOrder,
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 
@@ -74,6 +76,8 @@ function App() {
 
                                 {/* pages  */}
                                 <Route path="/orders" element={<Orders />} />
+                                <Route path="/addOrder" element={<AddOrder />} />
+                                <Route path="/editOrder" element={<EditOrder />} />
                                 <Route
                                     path="/addShip"
                                     element={<AddShip />}

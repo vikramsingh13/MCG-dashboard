@@ -138,7 +138,7 @@ const ShipForm = ({title, handleSubmit, submitName}) => {
 
             <div className="">
                 <button onClick={handleSubmit}
-                className="hover:bg-blue-400 bg-blue-300 rounded-lg p-4"
+                className="btn-primary"
                 >{submitName && submitName} {!submitName && "Submit"}</button>
             </div>
         </form> //ends add-ship
