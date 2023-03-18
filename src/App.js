@@ -21,6 +21,7 @@ import {
     ColorMapping,
     Editor,
     Line,
+    EditShip,
 } from "./pages";
 import { useStateContext } from "./contexts/ContextProvider";
 
@@ -76,6 +77,10 @@ function App() {
                                 <Route
                                     path="/addShip"
                                     element={<AddShip />}
+                                />
+                                <Route
+                                    path="/editShip"
+                                    element={<EditShip />}
                                 />
                                 <Route path="/shipList" element={<ShipList />} />
 
