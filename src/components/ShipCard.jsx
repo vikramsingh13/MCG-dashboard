@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ShipCard = ({ name, image }) => {
     const buttonStyle = "m-2 inline-block rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] ";
@@ -20,12 +21,16 @@ const ShipCard = ({ name, image }) => {
                         Some quick example text to build on the card title and
                         make up the bulk of the card's content.
                     </p>
+                    <Link to="/editShip" state={{name}}>
+
                     <button
                         type="button"
                         className={buttonStyle + "  bg-green-500 "}
-                    >
-                        Edit
+                        >
+                            Edit
                     </button>
+                    </Link>
+                        
                     <button
                         type="button"
                         className={buttonStyle + " bg-red-500 "}

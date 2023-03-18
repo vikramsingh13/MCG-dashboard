@@ -11,7 +11,7 @@ const AddShip = () => {
     return (
         <div>
             {!submitted &&
-            <ShipForm title="Add Ship" handleSubmit={handleSubmit}/>
+            <ShipForm title="Add Ship" handleSubmit={handleSubmit} submitName="Add"/>
             }
 
             {submitted && 

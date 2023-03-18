@@ -1,6 +1,6 @@
 import React from "react";
 
-const ShipForm = ({title, handleSubmit}) => {
+const ShipForm = ({title, handleSubmit, submitName}) => {
     
 
     const sectionStyle = " p-1 m-1 [&>*]:p-1 [&>*]:m-1";
@@ -139,7 +139,7 @@ const ShipForm = ({title, handleSubmit}) => {
             <div className="">
                 <button onClick={handleSubmit}
                 className="hover:bg-blue-400 bg-blue-300 rounded-lg p-4"
-                >Submit</button>
+                >{submitName && submitName} {!submitName && "Submit"}</button>
             </div>
         </form> //ends add-ship
     );
