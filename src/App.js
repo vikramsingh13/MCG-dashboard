@@ -33,7 +33,7 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <div className="flex relative dark:bg-main-dark-bg">
+                <div className="flex relative dark:bg-main-dark-bg max-w-screen">
                     <div
                         className="fixed right-4 bottom-4"
                         style={{ zIndex: "1000" }}

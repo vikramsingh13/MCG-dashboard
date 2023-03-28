@@ -4,14 +4,15 @@ import { OrderForm } from '../components';
 const AddOrder = () => {
     const [submitted, setSubmitted] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const addOrder = (e) => {
+        //todo
+        //code to check data and add the order
 
         setSubmitted(true);
     }
   return (
-    <div>
-      {!submitted && <OrderForm title="New Order" submitName="Order" handleSubmit={handleSubmit} />}
+    <div className='flex flex-col justify-center items-center text-center'>
+      {!submitted && <OrderForm title="New Order" submitName="Order" submitAction={addOrder} />}
       {submitted && <p>Order has been added.</p>}
     </div>
   )

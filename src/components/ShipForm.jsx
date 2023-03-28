@@ -139,7 +139,7 @@ const ShipForm = ({title, handleSubmit, submitName}) => {
             <div className="">
                 <button onClick={handleSubmit}
                 className="btn-primary"
-                >{submitName && submitName} {!submitName && "Submit"}</button>
+                >{submitName ? submitName : "Submit"}</button>
             </div>
         </form> //ends add-ship
     );

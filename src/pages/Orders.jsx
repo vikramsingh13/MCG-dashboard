@@ -6,11 +6,15 @@ import { Link } from "react-router-dom";
 
 const Orders = () => {
     return (
-        <div>
+        <div className="flex-col flex gap-4 justify-center items-center text-center">
             <p>Orders</p>
+            <p>[Promotions, discounts, recommendations, etc. will go here]</p>
+            
             <Link to='/addOrder'>
-                <button type="button">Add Order</button>
+                <button type="button" className="btn-primary">Add Order</button>
             </Link>
+
+            <p>[todo: list of past orders/invoices here]</p>
         </div>
     );
 };
